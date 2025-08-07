@@ -1,0 +1,26 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden; /* Opcional, para evitar scroll horizontal */
+}
+
+h1 {
+  text-align: center;
+}
+
+main{
+  max-width: 1200;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 80vh;  
+  padding: 3em;
+}
