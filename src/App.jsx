@@ -1,23 +1,28 @@
 
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+import ErrorComponent from './components/ErrorComponent'
+
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
 
-
   return (
-    <>
-      <header>
+    <BrowserRouter> 
       <NavBar />
-
-      </header>
-      <main>
-      <ItemListContainer className="contenedor-productos" style={{textAlign: "center"}} mensaje="Sección en mantenimineto. Vuelva más tarde para conocer nuestros productos."/>
-      </main>
-      
-    </>
+    
+      <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/libro/:cod' element={<ItemListContainer />} />
+          <Route path='/categoria/:nombreCategoria' element={<ItemDetailContainer />} />
+          <Route path='*' element={<ErrorComponent />} /> 
+      </Routes>
+    
+    </BrowserRouter>
   )
 }
 
