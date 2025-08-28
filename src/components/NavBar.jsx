@@ -9,10 +9,10 @@ const NavBar = () =>{
       <Navbar bg="dark" data-bs-theme="dark" expand="lg" style={{padding: '10px'}}>
         <Navbar.Brand as={NavLink} to='/'>Escaparate Virtual</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link to='categoria/Cuentos' className="anchor-nav">Cuento</Nav.Link>
-          <Nav.Link to='categoria/Novela' className="anchor-nav">Novela</Nav.Link>
-          <Nav.Link to='categoria/Poesia' className="anchor-nav">Poesía</Nav.Link>
-          <Nav.Link to='categoria/Otros' className="anchor-nav">Otros</Nav.Link>
+          <Nav.Link as={NavLink} to='categoria/Cuentos' className="anchor-nav">Cuento</Nav.Link>
+          <Nav.Link as={NavLink} to='categoria/Novela' className="anchor-nav">Novela</Nav.Link>
+          <Nav.Link as={NavLink} to='categoria/Poesia' className="anchor-nav">Poesía</Nav.Link>
+          <Nav.Link as={NavLink} to='categoria/Otros' className="anchor-nav">Otros</Nav.Link>
         </Nav> 
       <CartWidget />
       </Navbar>

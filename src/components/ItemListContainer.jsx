@@ -4,16 +4,16 @@ import { useParams } from "react-router-dom";
 import { getProducts } from "../mock/AsyncMock";
 
 const ItemListContainer = () => {
-  const [detalle, setDetalle] = useState([]);
+  const [libros, setLibros] = useState([]);
   const { categoria } = useParams();
-
+  
   useEffect(() => {
     getProducts()
-      .then((res) => {
-        if (categoria) {
-          setDetalle(res.filter((item) => item.categoria === categoria));
+    .then((res) => {
+      if (categoria) {
+        setLibros(res.filter((libro) => libro.categoria === categoria));
         } else {
-          setDetalle(res);
+          setLibros(res);
         }
       })
       .catch((error) => console.error(error));
@@ -21,7 +21,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <ItemList data={detalle} />
+      <ItemList data={libros} />
     </div>
   );
 };

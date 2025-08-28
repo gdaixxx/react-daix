@@ -5,9 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import ErrorComponent from './components/ErrorComponent'
-
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -17,9 +15,9 @@ function App() {
     
       <Routes>
           <Route path='/' element={<ItemListContainer />} />
-          <Route path='/libro/:cod' element={<ItemListContainer />} />
-          <Route path='/categoria/:nombreCategoria' element={<ItemDetailContainer />} />
-          <Route path='*' element={<ErrorComponent />} /> 
+          <Route path='/categoria/:categoria' element={<ItemListContainer />} />
+          <Route path='/cod/:cod' element={<ItemDetailContainer />} />
+          <Route path='*' element={<ErrorComponent />} />
       </Routes>
     
     </BrowserRouter>

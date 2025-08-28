@@ -11,7 +11,7 @@ function Item({ item }) {
         <Card.Text>
           {item.autoría}
         </Card.Text>
-        <Button variant="primary">Reservar</Button>
+         <Link className='btn btn-primary' to={`/cod/${item.cod}`}>Ver Más</Link>
       </Card.Body>
     </Card>
   );
